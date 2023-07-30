@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className='bg-gray-100 p-4 font-poppins text-md text-center text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200'>
+      <div className='bg-gray-100 p-4 text-base text-center text-neutral-500 dark:bg-neutral-700 dark:text-neutral-200'>
     2023 Portfolio by Rachel Busch - best viewed on desktop
       </div>
     </footer>

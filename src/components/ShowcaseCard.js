@@ -8,7 +8,7 @@ export default function ShowcaseCard ({ Showcase }) {
       <h2 className='mb-1 text-2xl font-medium'>
           {Showcase.title}
       </h2>
-      <p className='m-0 mb-10 body-text-normal'>
+      <p className='m-0 mb-10'>
         {Showcase.description}
       </p>
       <div className='w-full flex justify-center'>

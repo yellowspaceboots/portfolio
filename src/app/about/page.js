@@ -18,7 +18,7 @@ export default function About () {
       title: '📚 LEARNING.',
       description: 'I love figuring out new things and currently, when not focused on UX/UI design, spend time learning Blender and building mechanical keyboards.',
       image: learningPic,
-      footer: <div className='text-lg font-poppins text-neutral-700 font-medium'>
+      footer: <div className='font-medium'>
       Currently reading:
         <span className='font-light'>
         &nbsp;Sprint
@@ -29,7 +29,7 @@ export default function About () {
       title: '🎮 GAMING.',
       description: 'people all over the world through gaming, day one raiding, and hard end-game content.',
       image: gamingPic,
-      footer: <div className='text-lg font-poppins text-neutral-700 font-medium'>
+      footer: <div className='font-medium'>
       Currently playing:
         <span className='font-light'>
         &nbsp;Destiny 2 (over 3.5k hours 😅), Cult of the Lamb, and MW2.
@@ -46,7 +46,7 @@ export default function About () {
       description: '9 times out of 10 I will have music going on in the background. I like vibing out to some good lo-fi/jazzy tunes or rocking out to some metal/rock.',
       image: musicPic,
       footer: <>
-        <div className='text-lg font-poppins text-neutral-700 font-medium'>
+        <div className='font-medium'>
       Vibe Out:&nbsp;
           <span className='font-bold underline'>
             <Link
@@ -58,7 +58,7 @@ export default function About () {
             </Link>
           </span>
         </div>
-        <div className='text-lg font-poppins text-neutral-700 font-medium'>
+        <div className='font-medium'>
       Rock Out:&nbsp;
           <span className='font-bold underline'>
             <Link
@@ -83,20 +83,20 @@ export default function About () {
           priority
         />
         <div className='flex flex-col'>
-          <h1 className='font-shade font-bold text-5xl mb-4 text-neutral-700'>
+          <h1 className='font-shade font-bold text-5xl mb-4'>
           🌵Howdy, I&apos;m
             <span className='text-orange-700'>&nbsp;RACHEL</span>
           </h1>
-          <div className='text-lg font-poppins text-neutral-400 font-medium mb-14'>an aries ♈︎ from texas</div>
-          <div className='text-lg font-poppins text-neutral-700 font-medium mb-8'>
+          <div className='text-neutral-400 font-medium mb-14'>an aries ♈︎ from texas</div>
+          <div className='font-medium mb-8'>
           Curious, creative problem solver focused on the intersection of psychology and design.
           </div>
-          <div className='body-text-normal mb-8'>
+          <div className='mb-8'>
           I never thought that I would change my career, but after spending a long
           time working with teenagers and young adults as a mentor and counselor, I
           decided to take a leap of faith and pursue my passion for design.
           </div>
-          <div className='body-text-normal mb-8'>
+          <div className='mb-8'>
           My experience working with individuals who are often overlooked by society
           has given me a
             <span className='font-medium'>
@@ -112,7 +112,7 @@ export default function About () {
           in creating. I am excited to
           continue growing in this career and learning more every day.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-medium mb-8'>
+          <div className='font-medium mb-8'>
           Core software usage: Figma, Adobe XD, Adobe CC (Illustrator & PS)
           </div>
         </div>

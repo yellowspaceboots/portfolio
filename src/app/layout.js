@@ -29,7 +29,7 @@ export const metadata = {
 export default function RootLayout ({ children }) {
   return (
     <html lang='en' className={`${bungee.variable} ${bungeeShade.variable} ${poppins.variable}`}>
-      <body>
+      <body className='font-poppins text-lg text-neutral-700 font-light'>
         <Navbar />
         {children}
         <Footer />

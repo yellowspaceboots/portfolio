@@ -27,16 +27,16 @@ export default function Discord () {
             priority
           />
           <div className='flex flex-col justify-center'>
-            <div className='text-md font-poppins text-indigo-600 font-bold'>
+            <div className='body-text-section-title text-indigo-600'>
             Problem.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Discord does not currently have an iPhone Discord widget
             </div>
-            <div className='text-md font-poppins text-indigo-600 font-bold'>
+            <div className='body-text-section-title text-indigo-600'>
             Solution.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Create a Discord widget for the iPhone which follows current brand guidelines as outlined in&nbsp;
               <Link
                 className='underline'
@@ -47,7 +47,7 @@ export default function Discord () {
               Discord&apos;s media package.
               </Link>
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             As an avid user and someone who loves to customize their home screen,
             I wanted to create a conceptual mobile widget that enabled the user to view their recent mentions -
             with the option to disregard @everyone and @here should they so choose.

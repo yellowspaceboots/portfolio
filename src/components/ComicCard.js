@@ -13,7 +13,7 @@ export default function ComicCard ({ Comic }) {
         <h2 className='px-10 mb-4 text-xl font-bungee flex'>
           {Comic.title}
         </h2>
-        <p className='px-10 m-0 mb-6 max-w-[30ch] body-text-normal'>
+        <p className='px-10 m-0 mb-6 max-w-[30ch]'>
           {Comic.description}
         </p>
       </div>

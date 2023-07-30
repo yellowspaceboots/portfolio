@@ -21,25 +21,25 @@ export default function Garden () {
             <source type='video/webm' src='/garden_1.webm' />
           </video>
           <div className='flex flex-col justify-center'>
-            <div className='text-3xl font-poppins text-red-700 font-bold'>
+            <div className='text-3xl text-red-700 font-bold'>
             Just wait
             </div>
-            <div className='text-4xl font-poppins text-neutral-700 font-light mb-8'>
+            <div className='text-4xl mb-8'>
             Full case study coming soon!
             </div>
-            <div className='text-md font-poppins text-red-700 font-bold'>
+            <div className='body-text-section-title text-red-700'>
             Problem.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             A large majority of venue booking sites are exclusive in verbiage, access, and transparency.
             </div>
-            <div className='text-md font-poppins text-red-700 font-bold'>
+            <div className='body-text-section-title text-red-700'>
             Solution.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Created an inclusive, all-encompassing, and accessible way for anyone to tour, book, and feel welcome on their journey to finding the perfect venue.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Through research and the user-centered design process, I found that there was a
             large issue regarding inclusion within the venue industry. Riddled with heteronormative
             language and gender assumptions, not to mention accessibility issues, I felt there was a
@@ -48,7 +48,7 @@ export default function Garden () {
             language that respects all gender expressions and dynamics. Everyone deserves to have a
             magical day full of love, laughter, and belonging.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             This was created in Adobe XD to be a responsive site, starting with the desktop version and migrating to the mobile version.
             </div>
           </div>

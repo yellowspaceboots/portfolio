@@ -11,7 +11,7 @@ export default function HobbyCard ({ Hobby }) {
       <h2 className='mb-4 text-xl font-bungee flex'>
         {Hobby.title}
       </h2>
-      <p className='m-0 mb-6 max-w-[30ch] body-text-normal'>
+      <p className='m-0 mb-6 max-w-[30ch]'>
         {Hobby.description}
       </p>
       {Hobby.footer && Hobby.footer}

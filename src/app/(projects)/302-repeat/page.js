@@ -21,22 +21,22 @@ export default function Repeat () {
             <source type='video/webm' src='/cpr_1.webm' />
           </video>
           <div className='flex flex-col justify-center'>
-            <div className='text-3xl font-poppins text-blue-800 font-bold'>
+            <div className='text-3xl text-blue-800 font-bold'>
             Just wait
             </div>
-            <div className='text-4xl font-poppins text-neutral-700 font-light mb-40'>
+            <div className='text-4xl mb-40'>
             Full case study coming soon!
             </div>
-            <div className='text-md font-poppins text-blue-800 font-bold'>
+            <div className='body-text-section-title text-blue-800'>
             Problem.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Lack of convenient avenue for people to learn and become familiar with the steps of traditional CPR and hands-only CPR.
             </div>
-            <div className='text-md font-poppins text-blue-800 font-bold'>
+            <div className='body-text-section-title text-blue-800'>
             Solution.
             </div>
-            <div className='body-text-normal mb-8'>
+            <div className='mb-8'>
             Created a website and app that teaches both traditional and hands-only CPR at one&apos;s own convenience. Also provides and emergency situation mode which provides simplified steps with a compression counter to assist in a crisis.
             </div>
           </div>

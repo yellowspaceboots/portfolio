@@ -34,12 +34,12 @@ export default function Home () {
         <Link
           href='/about'
         >
-          <h1 className='font-shade font-bold text-4xl sm:text-7xl hover:italic mb-4 sm:mb-10 text-neutral-700'>
+          <h1 className='font-shade font-bold text-4xl sm:text-7xl hover:italic mb-4 sm:mb-10'>
           HOWDY, I&apos;M
             <span className='text-orange-700'>&nbsp;RACHEL</span>
           </h1>
         </Link>
-        <div className='font-poppins text-xl text-neutral-700 flex w-full'>
+        <div className='text-xl flex w-full'>
         I excel in utilizing my hyperfocus to combine user data, trends, experience, and accessibility best practices - resulting in the creation of purposeful and intentional designs.
         </div>
       </div>

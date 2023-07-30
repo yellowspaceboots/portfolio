@@ -11,7 +11,7 @@ const ProjectBanner = ({ Banner }) => {
             <div className='font-shade text-4xl lg:text-6xl xl:text-9xl'>
         {Banner.title}
             </div>
-            <div className='font-poppins text-xl'>
+            <div className='text-xl'>
         {Banner.subtitle}
             </div>
           </div>

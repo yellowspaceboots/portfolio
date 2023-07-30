@@ -23,7 +23,7 @@ export default function ProjectCard ({ Project }) {
           </svg>
         </span>
       </h2>
-      <p className='m-0 mb-20 max-w-[30ch] text-xl text-neutral-700 font-poppins'>
+      <p className='m-0 mb-20 max-w-[30ch] text-xl'>
         {Project.description}
       </p>
       <Image
