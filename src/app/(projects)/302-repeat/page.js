@@ -1,4 +1,5 @@
 import OtherProjects from '@/components/OtherProjects'
+import ProjectBanner from '@/components/ProjectBanner'
 
 export const metadata = {
   title: '🚑 CPR App | Rachel Busch',
@@ -6,20 +7,14 @@ export const metadata = {
 }
 
 export default function Repeat () {
+  const BannerObj = {
+    title: '30.2.Repeat',
+    subtitle: 'community focused CPR app',
+    gradient: 'bg-gradient-to-tr from-slate-700 via-blue-800 to-indigo-900'
+  }
   return (
     <main className='flex min-h-screen flex-col items-center justify-start'>
-      <div className='w-full flex-col items-start justify-between flex'>
-        <div className='flex items-end h-60 xl:h-96 2xl:h-[37rem] w-full bg-gradient-to-tr from-slate-700 via-blue-800 to-indigo-900'>
-          <div className='px-8 xl:px-52 pb-14 text-white'>
-            <div className='font-shade text-6xl lg:text-9xl'>
-            30.2.Repeat
-            </div>
-            <div className='font-poppins text-xl'>
-            community focused CPR app
-            </div>
-          </div>
-        </div>
-      </div>
+      <ProjectBanner Banner={BannerObj} />
       <div className='w-full'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row w-full px-8 lg:px-36 py-12'>
           <video autoPlay loop muted playsInline className='px-36 rounded-md h-full object-contain order-last lg:order-first object-center'>
@@ -35,13 +30,13 @@ export default function Repeat () {
             <div className='text-md font-poppins text-blue-800 font-bold'>
             Problem.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             Lack of convenient avenue for people to learn and become familiar with the steps of traditional CPR and hands-only CPR.
             </div>
             <div className='text-md font-poppins text-blue-800 font-bold'>
             Solution.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             Created a website and app that teaches both traditional and hands-only CPR at one&apos;s own convenience. Also provides and emergency situation mode which provides simplified steps with a compression counter to assist in a crisis.
             </div>
           </div>

@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import OtherProjects from '@/components/OtherProjects'
 import SectionTitle from '@/components/SectionTitle'
+import ProjectBanner from '@/components/ProjectBanner'
 import Feedback from '@/components/Feedback'
 import Accessibility from '../../../../public/accessibility.jpg'
 import TooManyTasks from '../../../../public/too_many_tasks.jpg'
@@ -14,6 +15,15 @@ import Process from '../../../../public/ding_process.png'
 import Amelie from '../../../../public/amelie.jpg'
 import Sebastion from '../../../../public/sebastion.jpg'
 import ComicCard from '@/components/ComicCard'
+import ShowcaseCard from '@/components/ShowcaseCard'
+import ConfirmationFatigue from '../../../../public/confirmation-fatigue.png'
+import InformationOverload from '../../../../public/information-overload.png'
+import Contrast from '../../../../public/contrast-color-accessibility.png'
+import Schedules from '../../../../public/schedules.png'
+import PTORequests from '../../../../public/pto-requests.png'
+import LocationBased from '../../../../public/location-based-reminders.png'
+import Timesheets from '../../../../public/timesheets.png'
+import AllInOne from '../../../../public/all-in-one-solution.png'
 
 export const metadata = {
   title: '⌚ Ding Timekeeping | Rachel Busch',
@@ -21,6 +31,13 @@ export const metadata = {
 }
 
 export default function Ding () {
+  const BannerObj = {
+    title: 'Ding!',
+    subtitle: 'timekeeping app',
+    gradient: 'bg-gradient-to-tr from-slate-400 via-indigo-600 to-slate-600',
+    image: Banner,
+    imagealt: 'ding banner image'
+  }
   const processComic = [
     {
       title: '01',
@@ -111,38 +128,60 @@ export default function Ding () {
       '"There are too many different avenues of communication to my boss about work stuff."'
     ]
   }
+  const processCards = [
+    {
+      title: 'Confirmation fatigue.',
+      description: 'Adjusted the process of clocking-in and out on the home screen to remove excess confirmation screens - now provides immediate, visual feedback allowing the user to know the clock in was successful at a glance.',
+      image: ConfirmationFatigue
+    },
+    {
+      title: 'Information overload.',
+      description: 'Simplified the home screen and allowed more breathing room - creating a clearer hierarchy for easy scanning.',
+      image: InformationOverload
+    }
+  ]
+  const solutionCards = [
+    {
+      title: 'Contrast, color, and accessibility.',
+      description: 'Tested against the WCAG and with colorblind users, rest assured - we kept accessibility at the forefront.',
+      image: Contrast
+    },
+    {
+      title: 'Schedules.',
+      description: 'Conveniently check your schedule any time.',
+      image: Schedules
+    },
+    {
+      title: 'Manage PTO Requests.',
+      description: 'Submit and check the status of PTO requests easily.',
+      image: PTORequests
+    },
+    {
+      title: 'Location-based reminders.',
+      description: 'Get reminded when arriving and when leaving work so you\'ll never forget a punch!',
+      image: LocationBased
+    },
+    {
+      title: 'Timesheets.',
+      description: 'Check, edit, and submit your timesheet with a few simple taps.',
+      image: Timesheets
+    },
+    {
+      title: 'All-in-one solution.',
+      description: 'Combining all of the tasks in one easy-to-use place so you can focus on what really matters - your passion!',
+      image: AllInOne
+    }
+  ]
   return (
     <main className='flex min-h-screen flex-col items-center justify-start'>
-      <div className='w-full flex-col items-start justify-between flex'>
-        <div className='flex items-end h-52 xl:h-96 2xl:h-[30rem] w-full bg-gradient-to-tr from-slate-400 via-indigo-600 to-slate-600'>
-          <div className='px-8 xl:px-52 text-white'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 w-full'>
-              <div className='flex justify-end flex-col mb-16'>
-                <div className='font-shade text-6xl lg:text-9xl'>
-            Ding!
-                </div>
-                <div className='font-poppins text-xl'>
-            timekeeping app
-                </div>
-              </div>
-              <Image
-                className='xl:h-full object-cover object-center'
-                src={Banner}
-                alt='ding banner image'
-                priority
-              />
-            </div>
-
-          </div>
-        </div>
-      </div>
+      <ProjectBanner Banner={BannerObj} />
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row w-full px-8 xl:px-52 py-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row section py-12'>
           <div>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Summary.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
           Ding! is a timekeeping app that provides people with a streamlined tool,
           that mitigates the needs for multiple avenues of work-related information.
           Schedules, timecards, PTO requests, and more are all at the person&apos;s fingertips.
@@ -151,16 +190,16 @@ export default function Ding () {
             </div>
           </div>
           <div className='flex flex-col'>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             My role
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             UX Designer and Researcher
             </div>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Concept
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             A timekeeping app
             </div>
           </div>
@@ -170,7 +209,7 @@ export default function Ding () {
         <div className='flex items-center py-2 xl:py-10 justify-center w-full bg-gray-100'>
           {metrics.map(Metric =>
             <div key={Metric.title} className='flex flex-col items-center justify-between w-36 h-0 md:h-24 m-6'>
-              <div className='text-md font-poppins text-indigo-500 text-center font-bold'>{Metric.title}</div>
+              <div className='body-text-section-title text-indigo-500 text-center'>{Metric.title}</div>
               <div className='text-3xl font-poppins font-light justify-self-end'>{Metric.value}</div>
             </div>
           )}
@@ -178,14 +217,14 @@ export default function Ding () {
       </div>
       <SectionTitle title='Overview' />
       <div className='w-full'>
-        <div className='px-8 xl:px-52 font-poppins text-neutral-700'>
-          <div className='text-md text-indigo-500 font-bold'>
+        <div className='section font-poppins text-neutral-700'>
+          <div className='body-text-section-title text-indigo-500'>
         Problem.
           </div>
           <div className='text-2xl font-medium mb-8'>
           Remembering all the mundane timekeeping tasks through various avenues at work can be frustrating and demoralizing.
           </div>
-          <div className='text-lg font-light mb-8'>
+          <div className='body-text-normal mb-8'>
           Through beginning stage interviews, we found that our potential users expressed
           frustration in the lack of accessibility awareness of current products on the market
           as well as how many different forms of communication that were needed to complete
@@ -210,9 +249,9 @@ export default function Ding () {
       </div>
       <SectionTitle title='The Process' />
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16 grid-flow-row w-full px-8 xl:px-52 py-12 font-poppins text-neutral-700'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-16 grid-flow-row w-full section py-12 font-poppins text-neutral-700'>
           <div className='col-span-2'>
-            <div className='text-md text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
           Synthesize the chaos.
             </div>
             <div className='text-2xl font-medium mb-8'>
@@ -233,15 +272,15 @@ export default function Ding () {
             alt='ding process image'
           />
         </div>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row w-full px-8 xl:px-52 py-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row section py-12'>
           <div>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Discovery and Research.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             Through completing competitive benchmarking via the discovery process we focused on answering the following:
             </div>
-            <ul className='list-disc pl-8 mb-8 text-lg font-poppins text-neutral-700 font-light'>
+            <ul className='list-disc pl-8 mb-8 body-text-normal'>
               <li>Who are the key competitors?</li>
               <li>What are the type and quality of competitors' products?</li>
               <li>How do competitors position themselves on the market?</li>
@@ -256,10 +295,10 @@ export default function Ding () {
             </ul>
           </div>
           <div className='flex flex-col'>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Hypothesis.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+            <div className='body-text-normal mb-8'>
             A very simple 'clock-in' and 'clock-out' system is the commonality across the different
             apps currently on the market. By incorporating a simple timekeeping system and building on
             top of that DING! can be set apart as an all-encompassing solution.
@@ -268,29 +307,29 @@ export default function Ding () {
         </div>
       </div>
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row w-full px-8 xl:px-52'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row section'>
           <div>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Identifying Challenges.
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light'>
+            <div className='body-text-normal'>
             Through interviews and focus groups, the most common challenges included:
             </div>
           </div>
         </div>
       </div>
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 w-full px-8 xl:px-52 py-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 section py-12'>
           {processComic.map(Comic => <ComicCard key={Comic.title} Comic={Comic} />)}
         </div>
       </div>
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row w-full px-8 xl:px-52'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row section'>
           <div>
-            <div className='text-md font-poppins text-indigo-500 font-bold'>
+            <div className='body-text-section-title text-indigo-500'>
             Who are the users?
             </div>
-            <div className='text-lg font-poppins text-neutral-700 font-light'>
+            <div className='body-text-normal'>
             Synthesizing the data gathered through the beginning of the process, surveys and interviews,
             I identified two main groups: employees and managers, then using that information created two personas.
             </div>
@@ -298,34 +337,36 @@ export default function Ding () {
         </div>
         <Feedback feedback={amelieFeedBack} />
         <Feedback feedback={sebastionFeedBack} />
-        <div className='px-8 xl:px-52 mb-10'>
-          <div className='text-md font-poppins text-indigo-500 font-bold'>
+        <div className='section mb-10'>
+          <div className='body-text-section-title text-indigo-500'>
           User journey.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-light'>
+          <div className='body-text-normal'>
           Example: Sebastien's end goals directed how I thought about steps between actions.
           Prompting the main functionality of the app - clocking in and out, to be the main item
           on the home screen and within the "thumb-zone" of the user for easier use while the remainder
           of the functions are found via simple navigation with the minimal number of steps.
           </div>
         </div>
-        <div className='px-8 xl:px-52 mb-10 h-72 border-2' />
-        <div className='px-8 xl:px-52 mb-10'>
-          <div className='text-md font-poppins text-indigo-500 font-bold'>
+        <div className='section mb-10 h-72 border-2' />
+        <div className='section mb-10'>
+          <div className='body-text-section-title text-indigo-500'>
           First rounds of prototype feedback.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-light'>
+          <div className='body-text-normal'>
           The first rounds of testing revealed two main pain points in the user journey:
           confirmation fatigue and information overload. Integrating that feedback into
           future iterations produced the following changes:
           </div>
         </div>
-        <div className='px-8 xl:px-52 mb-10 h-72 border-2' />
-        <div className='px-8 xl:px-52 mb-10'>
-          <div className='text-md font-poppins text-indigo-500 font-bold'>
+        <div className='grid grid-cols-1 2xl:grid-cols-2 gap-2 w-full section-full mb-10'>
+        {processCards.map(Showcase => <ShowcaseCard key={Showcase.title} Showcase={Showcase} />)}
+        </div>
+        <div className='section mb-20'>
+          <div className='body-text-section-title text-indigo-500'>
           Testing, testing, and more testing.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-light'>
+          <div className='body-text-normal'>
           More rounds of prototype testing, after changes were implemented, were
           conducted with a wide variety of participants. The feedback gathered allowed us
           to make adjustments to the user flow which garnered a well-rounded, more intuitive product.
@@ -337,24 +378,56 @@ export default function Ding () {
           closer to the bottom of the screen so they could easily hit it with their thumb.
           </div>
         </div>
+        <div className='section mb-20'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-16 grid-flow-row'>
+          <video autoPlay loop muted playsInline className='px-36 rounded-md h-full object-contain order-last lg:order-first object-center'>
+            <source type='video/webm' src='/cpr_1.webm' />
+          </video>
+          <div className='flex flex-col justify-center'>
+            <div className='body-text-section-title text-indigo-500'>
+            Some feedback from user testing.
+            </div>
+            <div className='body-text-normal mb-8'>
+            "It&apos;s not just about having variations of the same color that help people tell the
+            difference between them. It&apos;s about the actual components that create each color
+            in the color palette that are important and enable everyone to enjoy and use technology.
+            <span className='font-medium'>
+            &nbsp;I believe you have done a good job capturing that and making this accessible."
+            </span>
+            </div>
+            <div className='body-text-normal mb-8'>
+            "As someone with A.D.H.D,
+            <span className='font-medium'>
+            &nbsp;I could use some of these features on everything honestly.&nbsp;
+            </span>
+            I could use some of these features on everything honestly. I always
+            have a million things on my mind and even though I know I need to do something;
+            sometimes I forget and it's really frustrating."
+            </div>
+          </div>
+        </div>
+        </div>
       </div>
       <SectionTitle title='The Solution' />
-      <div className='px-8 xl:px-52'>
-        <div className='text-md font-poppins text-indigo-500 font-bold'>
+      <div className='section mb-10'>
+        <div className='body-text-section-title text-indigo-500'>
         Proposed solution.
         </div>
-        <div className='text-lg font-poppins text-neutral-700 font-light'>
+        <div className='body-text-normal'>
         DING! makes it easy to for you to keep track of your schedules, timesheets,
         and PTO requests in an accessible way while also providing reminders for
         clocking in and clocking out to relieve you of unnecessary worry and frustration.
         </div>
       </div>
+      <div className='grid grid-cols-1 2xl:grid-cols-2 gap-2 section-full mb-10'>
+        {solutionCards.map(Showcase => <ShowcaseCard key={Showcase.title} Showcase={Showcase} />)}
+        </div>
       <SectionTitle title='Reflections' />
-      <div className='px-8 xl:px-52'>
-        <div className='text-md font-poppins text-indigo-500 font-bold'>
+      <div className='section'>
+        <div className='body-text-section-title text-indigo-500'>
         Takeaways and next steps.
         </div>
-        <div className='text-lg font-poppins text-neutral-700 font-light'>
+        <div className='body-text-normal'>
         This was quite an eye-opening project. The more I learned, the more I grew
           <span className='font-medium'>
             &nbsp;concerned about the overall inaccessibility of the current apps on market&nbsp;
@@ -368,7 +441,7 @@ export default function Ding () {
         </div>
       </div>
       <div className='w-full'>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 w-full px-8 xl:px-52 py-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-2 section py-12'>
           {reflectionComic.map(Comic => <ComicCard key={Comic.title} Comic={Comic} />)}
         </div>
       </div>

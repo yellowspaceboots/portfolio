@@ -91,12 +91,12 @@ export default function About () {
           <div className='text-lg font-poppins text-neutral-700 font-medium mb-8'>
           Curious, creative problem solver focused on the intersection of psychology and design.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+          <div className='body-text-normal mb-8'>
           I never thought that I would change my career, but after spending a long
           time working with teenagers and young adults as a mentor and counselor, I
           decided to take a leap of faith and pursue my passion for design.
           </div>
-          <div className='text-lg font-poppins text-neutral-700 font-light mb-8'>
+          <div className='body-text-normal mb-8'>
           My experience working with individuals who are often overlooked by society
           has given me a
             <span className='font-medium'>
